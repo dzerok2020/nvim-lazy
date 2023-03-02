@@ -160,7 +160,7 @@ return {
 	},
 	{
 		"neovim/nvim-lspconfig",
-		event = "VeryLazy",
+		event = "BufWinEnter",
 		dependencies = {
 			"williamboman/mason-lspconfig.nvim",
 		},
@@ -168,28 +168,28 @@ return {
 			require("user.lsp")
 		end,
 	},
-	{
-		"williamboman/mason.nvim",
-		event = "VeryLazy",
-		cmd = {
-			"Mason",
-			"MasonInstall",
-			"MasonUninstall",
-			"MasonUninstallAll",
-			"MasonLog",
-		},
-		dependencies = { "williamboman/mason-lspconfig.nvim" },
-		init = function()
-			vim.tbl_map(function(plugin)
-				pcall(require, plugin)
-			end, { "lspconfig", "null-ls" })
-		end,
-	},
 	-- {
 	-- 	"williamboman/mason.nvim",
-	-- 	cmd = "Mason",
-	-- 	keys = { { "<leader>cm", "<cmd>Mason<cr>", desc = "Mason" } },
+	-- 	event = "VeryLazy",
+	-- 	cmd = {
+	-- 		"Mason",
+	-- 		"MasonInstall",
+	-- 		"MasonUninstall",
+	-- 		"MasonUninstallAll",
+	-- 		"MasonLog",
+	-- 	},
+	-- 	dependencies = { "williamboman/mason-lspconfig.nvim" },
+	-- 	init = function()
+	-- 		vim.tbl_map(function(plugin)
+	-- 			pcall(require, plugin)
+	-- 		end, { "lspconfig", "null-ls" })
+	-- 	end,
 	-- },
+	{
+		"williamboman/mason.nvim",
+		cmd = "Mason",
+		keys = { { "<leader>cm", "<cmd>Mason<cr>", desc = "Mason" } },
+	},
 	-- for formater linter
 	{ "RRethy/vim-illuminate", event = "BufRead" },
 	{
