@@ -25,7 +25,7 @@ return {
             if client.name == "tsserver" then
               -- stylua: ignore
               vim.keymap.set("n", "<leader>co", "<cmd>TypescriptOrganizeImports<CR>", { buffer = buffer, desc = "Organize Imports" })
-              vim.keymap.set("n", "<leader>cA", "<cmd>TypescriptAddMissingImports<CR>", { buffer = buffer, desc = "Add missing Imports" })
+              vim.keymap.set("n", "<leader>ca", "<cmd>TypescriptAddMissingImports<CR>", { buffer = buffer, desc = "Add missing Imports" })
               vim.keymap.set("n", "<leader>cR", "<cmd>TypescriptRenameFile<CR>", { desc = "Rename File", buffer = buffer })
             end
           end)
