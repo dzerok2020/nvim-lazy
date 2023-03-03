@@ -439,4 +439,10 @@ return {
 			require("todo-comments").setup()
 		end,
 	},
+	-- Automatically import libraries for typescript and javascript
+	{
+		"jose-elias-alvarez/typescript.nvim",
+		event = { "VeryLazy" },
+		cmd = { "TypescriptOrganizeImports", "TypescriptAddMissingImports", "TypescriptRemoveUnused" },
+	},
 }

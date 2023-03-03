@@ -10,7 +10,10 @@ end
 
 local icons = require("user.icons")
 nvim_tree.setup({
-  renderer = {
+	actions = {
+		open_file = { quit_on_open = true },
+	},
+	renderer = {
 		root_folder_modifier = ":t",
 		indent_markers = {
 			enable = true,
@@ -56,7 +59,7 @@ nvim_tree.setup({
 			},
 		},
 	},
-  diagnostics = {
+	diagnostics = {
 		enable = true,
 		show_on_dirs = true,
 		icons = {
@@ -66,7 +69,7 @@ nvim_tree.setup({
 			error = icons.diagnostics.BoldError,
 		},
 	},
-  view = {
+	view = {
 		width = 30,
 		hide_root_folder = false,
 		side = "left",

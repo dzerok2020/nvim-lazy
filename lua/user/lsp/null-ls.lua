@@ -10,7 +10,7 @@ local diagnostics = null_ls.builtins.diagnostics
 
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
-local sources = {}
+local sources = { require("typescript.extensions.null-ls.code-actions") }
 
 local data_exists, data = pcall(require, "custom.null-ls")
 if data_exists then
