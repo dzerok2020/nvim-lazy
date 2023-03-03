@@ -1,9 +1,9 @@
----@type nvim-lazy Config
+---@type nvim-lazyConfig
 local M = {}
 
 M.lazy_version = ">=9.1.0"
 
----@class nvim-lazy Config
+---@class nvim-lazyConfig
 local defaults = {
   -- colorscheme can be a string like `catppuccin` or a function that will load the colorscheme
   ---@type string|fun()
@@ -69,10 +69,10 @@ local defaults = {
   },
 }
 
----@type nvim-lazy Config
+---@type nvim-lazyConfig
 local options
 
----@param opts? nvim-lazy Config
+---@param opts? nvim-lazyConfig
 function M.setup(opts)
   options = vim.tbl_deep_extend("force", defaults, opts or {})
   if not M.has() then
@@ -169,7 +169,7 @@ setmetatable(M, {
     if options == nil then
       return vim.deepcopy(defaults)[key]
     end
-    ---@cast options nvim-lazy Config
+    ---@cast options nvim-lazyConfig
     return options[key]
   end,
 })

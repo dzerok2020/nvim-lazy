@@ -1,6 +1,6 @@
 local M = {}
 
----@param opts? nvim-lazy Config
+---@param opts? nvim-lazyConfig
 function M.setup(opts)
   require("nvim-lazy.config").setup(opts)
 end

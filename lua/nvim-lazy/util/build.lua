@@ -130,7 +130,7 @@ import TabItem from '@theme/TabItem';
 end
 
 function M.recipes()
-  local src = Util.read_file(vim.fs.normalize("~/projects/lazyvim.github.io/lua/recipes.lua"))
+  local src = Util.read_file(vim.fs.normalize("~/projects/nvim-lazy.github.io/lua/recipes.lua"))
   local lines = vim.split(src, "\n")
   local ret = {}
   local header = {} ---@type string[]
@@ -158,7 +158,7 @@ function M.recipes()
 end
 
 function M.update2()
-  local docs = vim.fs.normalize("~/projects/lazyvim.github.io/docs")
+  local docs = vim.fs.normalize("~/projects/nvim-lazy.github.io/docs")
 
   local config = Docs.extract("lua/nvim-lazy/config/init.lua", "\nlocal defaults = ({.-\n})")
 
@@ -177,7 +177,7 @@ function M.update2()
   Docs.save({
     lazy = {
       content = [[```lua title="lua/config/lazy.lua"]] .. "\n" .. Util.read_file(
-        vim.fn.fnamemodify(root .. "/../LazyVim-starter/lua/config/lazy.lua", ":p")
+        vim.fn.fnamemodify(root .. "/../nvim-lazy-starter/lua/config/lazy.lua", ":p")
       ) .. "\n```",
     },
   }, docs .. "/configuration/lazy.nvim.md")
@@ -198,7 +198,7 @@ To use this, add it to your **lazy.nvim** imports:
 ```lua title="lua/config/lazy.lua" {4}
 require("lazy").setup({
   spec = {
-    { "folke/LazyVim", import = "lazyvim.plugins" },
+    { "dzerok2020/nvim-lazy", import = "nvim-lazy.plugins" },
     { import = "%s" },
     { import = "plugins" },
   },
@@ -214,7 +214,7 @@ require("lazy").setup({
     end
   end)
 
-  local examples = vim.fn.fnamemodify(root .. "/../LazyVim-starter/lua/plugins/example.lua", ":p")
+  local examples = vim.fn.fnamemodify(root .. "/../nvim-lazy-starter/lua/plugins/example.lua", ":p")
   Docs.save({
     examples = Util.read_file(examples):gsub("^[^\n]+\n[^\n]+\n[^\n]+\n", ""),
   }, docs .. "/configuration/examples.md")
