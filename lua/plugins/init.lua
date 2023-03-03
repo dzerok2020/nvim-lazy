@@ -375,16 +375,16 @@ return {
 	-- 		require("fidget").setup()
 	-- 	end,
 	-- },
-	{
-		"mrded/nvim-lsp-notify",
-		event = "BufWinEnter",
-		dependencies = { "rcarriga/nvim-notify" },
-		config = function()
-			require("lsp-notify").setup({
-				notify = require("notify"),
-			})
-		end,
-	},
+	-- {
+	-- 	"mrded/nvim-lsp-notify",
+	-- 	event = "BufWinEnter",
+	-- 	dependencies = { "rcarriga/nvim-notify" },
+	-- 	config = function()
+	-- 		require("lsp-notify").setup({
+	-- 			notify = require("notify"),
+	-- 		})
+	-- 	end,
+	-- },
 
 	--custom
 	--- masukan plugin tambahan disini
