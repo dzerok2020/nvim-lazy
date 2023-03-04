@@ -325,12 +325,4 @@ return {
 
   -- ui components
   { "MunifTanjim/nui.nvim",        lazy = true },
-
-  {
-    "phaazon/hop.nvim",
-    event = "VeryLazy",
-    init = function()
-      require 'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
-    end,
-  },
 }
