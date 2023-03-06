@@ -214,41 +214,6 @@ return {
     opts = {
       plugins = {
         spelling = true,
-        presets = {
-          operators = true,
-          motions = true,
-          text_objects = true,
-          windows = true,
-          nav = true,
-          z = true,
-          g = true,
-        }
-      },
-      layout  = {
-        height          = { min = 4, max = 25 },
-        width           = { min = 20, max = 50 },
-        spacing         = 3,
-        border          = {
-          { "╭", "FloatBorder" },
-          { "─", "FloatBorder" },
-          { "╮", "FloatBorder" },
-          { "│", "FloatBorder" },
-          { "╯", "FloatBorder" },
-          { "─", "FloatBorder" },
-          { "╰", "FloatBorder" },
-          { "│", "FloatBorder" },
-        },
-        border_chars    = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
-        highlight       = "Pmenu",
-        highlight_group = "PmenuSel",
-        window          = {
-          border = "rounded",
-          winblend = 10,
-          highlights = {
-            border = "FloatBorder",
-            background = "NormalFloat",
-          },
-        },
       },
     },
     config = function(_, opts)
@@ -276,13 +241,6 @@ return {
         keymaps["<leader>sn"] = { name = "+noice" }
       end
       wk.register(keymaps)
-
-      vim.api.nvim_command('highlight NormalFloat guibg=#1c1c1c')
-      vim.api.nvim_command('highlight FloatBorder guifg=#565c64 guibg=#1c1c1c')
-      vim.api.nvim_command('highlight link WhichKeyFloat NormalFloat')
-      vim.api.nvim_command('highlight link WhichKeySeparator FloatBorder')
-      vim.api.nvim_command('highlight link WhichKeyGroup Pmenu')
-      vim.api.nvim_command('highlight link WhichKeyDesc PmenuSel')
     end,
   },
 

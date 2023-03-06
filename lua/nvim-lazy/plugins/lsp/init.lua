@@ -4,8 +4,8 @@ return {
     "neovim/nvim-lspconfig",
     event = { "BufReadPre", "BufNewFile" },
     dependencies = {
-      { "folke/neoconf.nvim", cmd = "Neoconf", config = true },
-      { "folke/neodev.nvim", opts = { experimental = { pathStrict = true } } },
+      { "folke/neoconf.nvim", cmd = "Neoconf",                                config = true },
+      { "folke/neodev.nvim",  opts = { experimental = { pathStrict = true } } },
       "mason.nvim",
       "williamboman/mason-lspconfig.nvim",
       {
@@ -65,7 +65,7 @@ return {
       },
     },
     ---@param opts PluginLspOpts
-    config = function(plugin, opts)
+    config = function(_, opts)
       -- setup autoformat
       require("nvim-lazy.plugins.lsp.format").autoformat = opts.autoformat
       -- setup formatting and keymaps
@@ -149,7 +149,6 @@ return {
 
   -- cmdline tools and lsp servers
   {
-
     "williamboman/mason.nvim",
     cmd = "Mason",
     keys = { { "<leader>cm", "<cmd>Mason<cr>", desc = "Mason" } },
@@ -162,7 +161,7 @@ return {
       },
     },
     ---@param opts MasonSettings | {ensure_installed: string[]}
-    config = function(plugin, opts)
+    config = function(_, opts)
       require("mason").setup(opts)
       local mr = require("mason-registry")
       for _, tool in ipairs(opts.ensure_installed) do
