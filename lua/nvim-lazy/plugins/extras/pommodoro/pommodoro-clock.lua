@@ -6,7 +6,7 @@ return {
 			modes = {
 				["work"] = { "POMMODORO", 25 },
 				["short_break"] = { "SHORT BREAK", 5 },
-				["long_break"] = { "LONG BREAK", 10 },
+				["long_break"] = { "LONG BREAK", 30 },
 			},
 			animation_duration = 300,
 			animation_fps = 30,
