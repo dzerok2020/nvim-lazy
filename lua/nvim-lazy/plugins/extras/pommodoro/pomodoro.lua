@@ -1,6 +1,7 @@
 return {
 	{
 		"wthollingsworth/pomodoro.nvim",
+		event = "VeryLazy",
 		dependencies = { "MunifTanjim/nui.nvim" },
 		opts = {
 			time_work = 25,
