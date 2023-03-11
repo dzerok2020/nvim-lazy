@@ -241,7 +241,7 @@ return {
 				keymaps["<leader>sn"] = { name = "+noice" }
 			end
 
-			if Util.has("pommodoro-clock.nvim") then
+			if Util.has("pommodoro-clock.nvim") or Util("pomodoro.nvim") then
 				keymaps["<leader>p"] = { name = "+pommodoro" }
 			end
 
