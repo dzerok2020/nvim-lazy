@@ -122,8 +122,12 @@ return {
 								right = 0,
 							},
 						},
-						{ require("pomodoro").statusline },
-            -- { "filename", path = 1,         symbols = { modified = "  ", readonly = "", unnamed = "" } },
+						{
+							"filename",
+							path = 1,
+							symbols = { modified = "  ", readonly = "", unnamed = "" },
+							require("pomodoro").statusline,
+						},
             -- stylua: ignore
             {
               function() return require("nvim-navic").get_location() end,
