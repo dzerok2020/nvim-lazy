@@ -125,22 +125,23 @@ return {
 							},
 						},
 						{
+							"filename",
+							path = 1,
+							symbols = { modified = "  ", readonly = "", unnamed = "" },
+						},
+						{
 							function()
 								if Util.has("pomodoro.nvim") then
 									return require("pomodoro").statusline
 								end
+								return ""
 							end,
 						},
+						-- stylua: ignore
 						-- {
-						-- 	"filename",
-						-- 	path = 1,
-						-- 	symbols = { modified = "  ", readonly = "", unnamed = "" },
+						--   function() return require("nvim-navic").get_location() end,
+						--   cond = function() return package.loaded["nvim-navic"] and require("nvim-navic").is_available() end,
 						-- },
-            -- stylua: ignore
-            {
-              function() return require("nvim-navic").get_location() end,
-              cond = function() return package.loaded["nvim-navic"] and require("nvim-navic").is_available() end,
-            },
 					},
 					lualine_x = {
             -- stylua: ignore
