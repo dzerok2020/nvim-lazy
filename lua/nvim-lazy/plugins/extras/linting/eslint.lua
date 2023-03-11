@@ -1,11 +1,5 @@
 return {
   {
-    "williamboman/mason.nvim",
-    opts = function(_, opts)
-      table.insert(opts.ensure_installed, "eslint_d")
-    end,
-  },
-  {
     "neovim/nvim-lspconfig",
     -- other settings removed for brevity
     opts = {
