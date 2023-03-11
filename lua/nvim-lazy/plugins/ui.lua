@@ -132,7 +132,7 @@ return {
 						{
 							function()
 								if Util.has("pomodoro.nvim") then
-									return require("pomodoro").statusline
+									return require("pomodoro").statusline()
 								end
 								return ""
 							end,
