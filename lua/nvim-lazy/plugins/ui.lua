@@ -1,3 +1,5 @@
+local Util = require("nvim-lazy.util")
+
 return {
 	-- Better `vim.notify()`
 	{
@@ -122,7 +124,13 @@ return {
 								right = 0,
 							},
 						},
-						{ require("pomodoro").statusline },
+						{
+							function()
+								if Util.has("pomodoro.nvim") then
+									return require("pomodoro").statusline
+								end
+							end,
+						},
 						-- {
 						-- 	"filename",
 						-- 	path = 1,
