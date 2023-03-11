@@ -1,6 +1,6 @@
 return {
 	{
-		"wthollingsworth/pomodoro.nvim",
+		"dzerok2020/pomodoro.nvim",
 		event = "VeryLazy",
 		dependencies = { "MunifTanjim/nui.nvim" },
 		opts = {
