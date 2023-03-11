@@ -34,7 +34,7 @@ return {
               vim.keymap.set("n", "<leader>co", "<cmd>TypescriptOrganizeImports<CR>", { buffer = buffer, desc = "Organize Imports" })
 							vim.keymap.set(
 								"n",
-								"<leader>ca",
+								"<leader>cA",
 								"<cmd>TypescriptAddMissingImports<CR>",
 								{ buffer = buffer, desc = "Add missing Imports" }
 							)
