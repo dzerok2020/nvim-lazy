@@ -13,8 +13,8 @@ return {
 		end,
 		keys = {
 			{ "<leader>ps", "<cmd>PomodoroStart<cr>", desc = "Start Pommodoro" },
-			{ "<leader>pc", "<cmd>PomodoroStatus<cr>", desc = "Stop Pommodoro" },
-			{ "<leader>pS", "<cmd>PomodoroStop<cr>", desc = "Status Pommodoro" },
+			{ "<leader>pc", "<cmd>PomodoroStop<cr>", desc = "Stop Pommodoro" },
+			{ "<leader>pS", "<cmd>PomodoroStatus<cr>", desc = "Status Pommodoro" },
 		},
 	},
 }
