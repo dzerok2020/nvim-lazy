@@ -350,4 +350,15 @@ return {
 
 	-- ui components
 	{ "MunifTanjim/nui.nvim", lazy = true },
+
+	-- for winbar icon
+	{
+		"SmiteshP/nvim-navic",
+		dependencies = "neovim/nvim-lspconfig",
+		event = "BufRead",
+		config = function()
+			require("config.breadcrumb")
+			require("config.winbar")
+		end,
+	},
 }
