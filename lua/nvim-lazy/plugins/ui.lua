@@ -326,6 +326,7 @@ return {
 	-- lsp symbol navigation for lualine
 	{
 		"SmiteshP/nvim-navic",
+		dependencies = "neovim/nvim-lspconfig",
 		lazy = true,
 		init = function()
 			vim.g.navic_silence = true
@@ -343,6 +344,10 @@ return {
 				icons = require("nvim-lazy.config").icons.kinds,
 			}
 		end,
+		config = function()
+			require("nvim-lazy.config.breadcrumb")
+			require("nvim-lazy.config.winbar")
+		end,
 	},
 
 	-- icons
@@ -350,15 +355,4 @@ return {
 
 	-- ui components
 	{ "MunifTanjim/nui.nvim", lazy = true },
-
-	-- for winbar icon
-	{
-		"SmiteshP/nvim-navic",
-		dependencies = "neovim/nvim-lspconfig",
-		event = "BufRead",
-		config = function()
-			require("config.breadcrumb")
-			require("config.winbar")
-		end,
-	},
 }
