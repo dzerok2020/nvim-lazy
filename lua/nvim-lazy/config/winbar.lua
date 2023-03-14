@@ -32,7 +32,7 @@ end
 local get_filename = function()
 	local filename = vim.fn.expand("%:t")
 	local extension = vim.fn.expand("%:e")
-	local f = require("config.functions")
+	local f = require("nvim-lazy.config.functions")
 
 	if not f.isempty(filename) then
 		local file_icon, hl_group = require("nvim-web-devicons").get_icon(filename, extension, { default = true })
@@ -85,7 +85,7 @@ local get_gps = function()
 		return ""
 	end
 
-	if not require("config.functions").isempty(gps_location) then
+	if not require("nvim-lazy.config.functions").isempty(gps_location) then
 		return "%#NavicSeparator#" .. icons.ui.ChevronRight .. "%* " .. gps_location
 	else
 		return ""
@@ -96,7 +96,7 @@ local get_winbar = function()
 	if excludes() then
 		return
 	end
-	local f = require("config.functions")
+	local f = require("nvim-lazy.config.functions")
 	local value = get_filename()
 
 	local gps_added = false
