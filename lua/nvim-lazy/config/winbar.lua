@@ -1,5 +1,5 @@
 local active = true
-local icons = require("config.icons")
+local icons = require("nvim-lazy.config.icons")
 local excludes = function()
 	return vim.tbl_contains({
 		"help",
