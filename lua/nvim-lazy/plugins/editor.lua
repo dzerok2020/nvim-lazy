@@ -378,4 +378,9 @@ return {
       { "<leader>st", "<cmd>TodoTelescope<cr>",                            desc = "Todo" },
     },
 	},
+	{
+		"mg979/vim-visual-multi",
+		event = "VeryLazy",
+		branch = "master",
+	},
 }
