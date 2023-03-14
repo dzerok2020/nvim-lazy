@@ -3,7 +3,7 @@ if not status_ok then
 	return
 end
 
-local ico = require("config.icons")
+local ico = require("nvim-lazy.config.icons")
 local icons = ico.kind
 
 navic.setup({
