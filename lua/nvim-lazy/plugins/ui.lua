@@ -355,4 +355,7 @@ return {
 
 	-- ui components
 	{ "MunifTanjim/nui.nvim", lazy = true },
+
+	-- rainbow parentheses
+	{ "p00f/nvim-ts-rainbow", event = "BufRead", dependencies = "nvim-treesitter/nvim-treesitter" },
 }
